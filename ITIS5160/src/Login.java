@@ -31,7 +31,9 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		PrintWriter scribe = response.getWriter();
+		request.getSession().setAttribute("foo", "bar");
 		scribe.println("Hooray!");
+		response.sendRedirect("test.jsp");
 	}
 
 	/**
